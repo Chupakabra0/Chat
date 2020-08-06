@@ -29,3 +29,4 @@ C:\Projects\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.cache
 C:\Projects\Chat\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
 C:\Projects\Chat\Chat\obj\Debug\Chat.exe
 C:\Projects\Chat\Chat\obj\Debug\Chat.pdb
+C:\Projects\Chat\Chat\obj\Debug\Chat.csproj.Fody.CopyLocal.cache
