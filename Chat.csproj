@@ -69,6 +69,11 @@
             <DependentUpon>MainWindow.xaml</DependentUpon>
             <SubType>Code</SubType>
         </Compile>
+        <Page Include="Styles\Button.xaml" />
+        <Page Include="Styles\Colors.xaml" />
+        <Page Include="Styles\Fonts.xaml" />
+        <Page Include="Styles\Text.xaml" />
+        <Page Include="Styles\Window.xaml" />
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\Annotations.cs" />

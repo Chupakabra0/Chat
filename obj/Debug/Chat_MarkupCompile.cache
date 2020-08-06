@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Projects\Chat\Chat\App.xaml
-11151548125
-3-446414182
+6-1870468061
+13-262085560
 7-735366509
 10-293730499
-MainWindow.xaml;
+MainWindow.xaml;Styles\Button.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Text.xaml;Styles\Window.xaml;
 
 False
 

@@ -9,7 +9,7 @@
         Icon="Resources/Logo/SmallLogo.ico">
 
     <StackPanel>
-        
+        <TextBlock Text="Welcome, friend!" FontFamily="{StaticResource LatoThin}" FontSize="30"/>
     </StackPanel>
 
 </Window>

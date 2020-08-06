@@ -30,3 +30,9 @@ C:\Projects\Chat\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
 C:\Projects\Chat\Chat\obj\Debug\Chat.exe
 C:\Projects\Chat\Chat\obj\Debug\Chat.pdb
 C:\Projects\Chat\Chat\obj\Debug\Chat.csproj.Fody.CopyLocal.cache
+C:\Projects\Chat\Chat\obj\Debug\Styles\Button.baml
+C:\Projects\Chat\Chat\obj\Debug\Styles\Colors.baml
+C:\Projects\Chat\Chat\obj\Debug\Styles\Fonts.baml
+C:\Projects\Chat\Chat\obj\Debug\Styles\Text.baml
+C:\Projects\Chat\Chat\obj\Debug\Styles\Window.baml
+C:\Projects\Chat\Chat\obj\Debug\App.baml
