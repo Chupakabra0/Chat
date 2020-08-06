@@ -8,8 +8,9 @@
         Title="MainWindow" Height="350" Width="525"
         Icon="Resources/Logo/SmallLogo.ico">
 
-    <StackPanel>
-        <TextBlock Text="Welcome, friend!" FontFamily="{StaticResource LatoThin}" FontSize="30"/>
-    </StackPanel>
-
+    <UniformGrid Margin="10">
+        <StackPanel HorizontalAlignment="Center">
+            <TextBlock Text="Welcome, friend!" FontFamily="{StaticResource LatoThin}" FontSize="30"/>
+        </StackPanel>
+    </UniformGrid>
 </Window>
