@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using Chat.DataModels;
 using Fasetto.Word;
 
 namespace Chat {
@@ -30,6 +31,7 @@ namespace Chat {
             };
 
             this.Title = "Welcome home!";
+            this.CurrentPage = ApplicationPage.Login;
             this.OuterMargin = 10d;
             this.WindowRadius = 10d;
             this.ResizeBorder = 6d;
@@ -77,6 +79,11 @@ namespace Chat {
             SystemCommands.ShowSystemMenu(this._window, this._window.PointToScreen(Mouse.GetPosition(this._window)));
         });
         private ICommand _menuCommand;
+
+        /// <summary>
+        /// The current page of application
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; }
 
         /// <summary>
         /// Title of the window

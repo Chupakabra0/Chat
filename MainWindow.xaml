@@ -20,7 +20,7 @@
     </WindowChrome.WindowChrome>
 
     <UniformGrid Background="{StaticResource ForegroundLightBrush}">
-        
+        <Frame Content="{Binding CurrentPage}"></Frame>
     </UniformGrid>
 
 </Window>
