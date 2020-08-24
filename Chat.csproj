@@ -110,6 +110,7 @@
     <Resource Include="Resources\Fonts\Lato-Thin.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Bakgrounds\EmojiBackground.png" />
     <Content Include="Resources\Fonts\Lato-Black.ttf" />
     <Content Include="Resources\Fonts\Lato-BlackItalic.ttf" />
     <Content Include="Resources\Fonts\Lato-Bold.ttf" />
@@ -118,9 +119,9 @@
     <Content Include="Resources\Fonts\Lato-Light.ttf" />
     <Content Include="Resources\Fonts\Lato-LightItalic.ttf" />
     <Content Include="Resources\Fonts\Lato-Regular.ttf" />
-    <Content Include="Resources\Logo\HugeLogo.png" />
-    <Content Include="Resources\Logo\MediumLogo.png" />
-    <Content Include="Resources\Logo\SmallLogo.ico" />
+    <Content Include="Resources\Logos\HugeLogo.png" />
+    <Content Include="Resources\Logos\MediumLogo.png" />
+    <Content Include="Resources\Logos\SmallLogo.ico" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

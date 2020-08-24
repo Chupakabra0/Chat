@@ -3,6 +3,7 @@
                     xmlns:chat="clr-namespace:Chat">
 
     <Style x:Key="MainWindow" TargetType="{x:Type chat:MainWindow}">
+        <Setter Property="Icon" Value="../Resources/Logos/SmallLogo.ico"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Window">
@@ -47,7 +48,7 @@
 
                                     <!--Icon-->
                                     <Button Style="{StaticResource SystemIcon}" Command="{Binding MenuCommand}">
-                                        <Image Source="../Resources/Logo/SmallLogo.ico" />
+                                        <Image Source="../Resources/Logos/SmallLogo.ico" />
                                     </Button>
 
                                     <!--Title-->
@@ -74,7 +75,7 @@
 
                                 <!--Content-->
                                 <Border Grid.Row="1" Padding="{Binding ContentPaddingThickness, FallbackValue=6}">
-                                    <ContentPresenter Content="{TemplateBinding Content}" />
+                                    <ContentPresenter Content="{TemplateBinding Content}"/>
                                 </Border>
 
                             </Grid>

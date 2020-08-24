@@ -7,8 +7,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
 
-    <Grid>
-        <Button Content="FUCK ME!"></Button>
-    </Grid>
+    <Border Background="{StaticResource BlueBrush}">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0, 0, 500, 500"
+                        ImageSource="../Resources/Bakgrounds/EmojiBackground.png">
+                </ImageBrush>
+            </Grid.Background>
+        </Grid>
+    </Border>
 
 </Page>

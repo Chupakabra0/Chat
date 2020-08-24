@@ -10,7 +10,6 @@
         Height="600" Width="900"
         MinHeight="{Binding MinHeight}" MinWidth="{Binding MinWidth}"
         Title="{Binding Title}"
-        Icon="Resources/Logo/SmallLogo.ico"
         Style="{StaticResource MainWindow}">
 
     <WindowChrome.WindowChrome>
