@@ -62,6 +62,7 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ViewModels\WindowVM.cs" />
     <Compile Include="Windows\WindowResizer.cs" />
     <Page Include="MainWindow.xaml">
@@ -122,9 +123,7 @@
     <Content Include="Resources\Logo\MediumLogo.png" />
     <Content Include="Resources\Logo\SmallLogo.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ValueConverters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Fody.6.1.1\build\Fody.targets" Condition="Exists('packages\Fody.6.1.1\build\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
