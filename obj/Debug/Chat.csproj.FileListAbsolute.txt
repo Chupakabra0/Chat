@@ -36,3 +36,4 @@ C:\Projects\Chat\Chat\obj\Debug\Styles\Fonts.baml
 C:\Projects\Chat\Chat\obj\Debug\Styles\Text.baml
 C:\Projects\Chat\Chat\obj\Debug\Styles\Window.baml
 C:\Projects\Chat\Chat\obj\Debug\App.baml
+C:\Projects\Chat\Chat\obj\Debug\GeneratedInternalTypeHelper.g.cs

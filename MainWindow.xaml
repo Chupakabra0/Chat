@@ -4,13 +4,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        WindowStyle="None" AllowsTransparency="True"
-        Title="MainWindow" Height="350" Width="525"
-        Icon="Resources/Logo/SmallLogo.ico">
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Height="600" Width="900"
+        MinHeight="{Binding MinHeight}" MinWidth="{Binding MinWidth}"
+        Title="{Binding Title}"
+        Icon="Resources/Logo/SmallLogo.ico"
+        Style="{StaticResource MainWindow}">
 
-    <UniformGrid Margin="10">
-        <StackPanel HorizontalAlignment="Center">
-            <TextBlock Text="Welcome, friend!" FontFamily="{StaticResource LatoThin}" FontSize="30"/>
-        </StackPanel>
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness, FallbackValue=6}"
+                      CaptionHeight="{Binding TitleHeight, FallbackValue=40}"
+                      GlassFrameThickness="0"
+                      CornerRadius="0"/>
+    </WindowChrome.WindowChrome>
+
+    <UniformGrid Background="{StaticResource ForegroundLightBrush}">
+        
     </UniformGrid>
+
 </Window>
