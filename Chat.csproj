@@ -107,6 +107,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <Resource Include="Resources\Fonts\Lato-Thin.ttf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Fonts\Lato-Black.ttf" />
@@ -117,8 +118,6 @@
     <Content Include="Resources\Fonts\Lato-Light.ttf" />
     <Content Include="Resources\Fonts\Lato-LightItalic.ttf" />
     <Content Include="Resources\Fonts\Lato-Regular.ttf" />
-    <Content Include="Resources\Fonts\Lato-Thin.ttf" />
-    <Content Include="Resources\Fonts\Lato-ThinItalic.ttf" />
     <Content Include="Resources\Logo\HugeLogo.png" />
     <Content Include="Resources\Logo\MediumLogo.png" />
     <Content Include="Resources\Logo\SmallLogo.ico" />

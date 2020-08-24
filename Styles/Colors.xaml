@@ -18,12 +18,31 @@
     <Color x:Key="ForegroundLightColor">#FFFFFFFF</Color>
     <SolidColorBrush x:Key="ForegroundLightBrush" Color="{StaticResource ForegroundLightColor}" />
 
-    <!-- Foreground dark -->
-    <Color x:Key="ForegroundDarkColor">#FF000000</Color>
-    <SolidColorBrush x:Key="ForegroundDarkBrush" Color="{StaticResource ForegroundDarkColor}" />
+    <Color x:Key="ForegroundDarkColor">#BDBDBD</Color>
+    <SolidColorBrush x:Key="ForegroundDarkBrush" Color="{StaticResource ForegroundDarkColor}"></SolidColorBrush>
 
-    <!--Red-->
-    <Color x:Key="RedColor">#FFFF0000</Color>
-    <SolidColorBrush x:Key="RedColorBrush" Color="{StaticResource RedColor}" />
+    <!-- Foreground very dark -->
+    <Color x:Key="ForegroundVeryDarkColor">#FF000000</Color>
+    <SolidColorBrush x:Key="ForegroundVeryDarkBrush" Color="{StaticResource ForegroundVeryDarkColor}" />
+
+    <!-- Red -->
+    <Color x:Key="RedColor">#FF0000</Color>
+    <SolidColorBrush x:Key="RedBrush" Color="{StaticResource RedColor}" />
+
+    <!-- Purple -->
+    <Color x:Key="PurpleColor">#FF4747</Color>
+    <SolidColorBrush x:Key="PurpleBrush" Color="{StaticResource PurpleColor}" />
+
+    <!-- Green -->
+    <Color x:Key="GreenColor">#00C542</Color>
+    <SolidColorBrush x:Key="GreenBrush" Color="{StaticResource GreenColor}" />
+
+    <!-- Blue -->
+    <Color x:Key="BlueColor">#3099C5</Color>
+    <SolidColorBrush x:Key="BlueBrush" Color="{StaticResource BlueColor}" />
+
+    <!-- Orange -->
+    <Color x:Key="OrangeColor">#FFA800</Color>
+    <SolidColorBrush x:Key="OrangeBrush" Color="{StaticResource OrangeColor}" />
 
 </ResourceDictionary>

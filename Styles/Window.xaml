@@ -51,8 +51,16 @@
                                     </Button>
 
                                     <!--Title-->
-                                    <Viewbox Grid.Column="1">
-                                        <TextBlock Text="{Binding Title, FallbackValue='Welcome home!'}" Style="{StaticResource HeaderTextBlock}" />
+                                    <Viewbox Grid.Column="0" Grid.ColumnSpan="3" Margin="5">
+                                        <!--<TextBlock Text="{Binding Title, FallbackValue='Welcome home!'}" Style="{StaticResource HeaderTextBlock}" />-->
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock FontFamily="{StaticResource LatoBold}" FontSize="{StaticResource FontSizeRegular}"
+                                                       HorizontalAlignment="Center" Margin="0, 0, 0, -5">
+                                                <Run Text="W" Foreground="{StaticResource OrangeBrush}"></Run><Run Text="O" Foreground="{StaticResource BlueBrush}"></Run><Run Text="R" Foreground="{StaticResource PurpleBrush}"></Run><Run Text="D" Foreground="{StaticResource GreenBrush}"></Run>
+                                            </TextBlock>
+                                            <TextBlock Text="by Chupakabra" FontFamily="{StaticResource LatoRegular}"
+                                                       Foreground="{StaticResource ForegroundDarkBrush}" HorizontalAlignment="Center"></TextBlock>
+                                        </StackPanel>
                                     </Viewbox>
 
                                     <!--Buttons-->

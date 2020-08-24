@@ -58,7 +58,7 @@
     <Style x:Key="CloseWindowButton" BasedOn="{StaticResource WindowButton}" TargetType="Button">
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{StaticResource RedColorBrush}" />
+                <Setter Property="Background" Value="{StaticResource RedBrush}" />
                 <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"/>
             </Trigger>
         </Style.Triggers>
