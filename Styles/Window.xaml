@@ -48,7 +48,9 @@
 
                                     <!--Icon-->
                                     <Button Style="{StaticResource SystemIcon}" Command="{Binding MenuCommand}">
-                                        <Image Source="../Resources/Logos/SmallLogo.ico" />
+                                        <!--<Image Source="../Resources/Logos/SmallLogo.ico" />-->
+                                        <TextBlock Text="≡" FontFamily="{StaticResource LatoRegular}" FontSize="40"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
                                     </Button>
 
                                     <!--Title-->

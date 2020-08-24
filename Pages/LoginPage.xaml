@@ -11,7 +11,7 @@
         <Grid>
             <Grid.Background>
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0, 0, 500, 500"
-                        ImageSource="../Resources/Bakgrounds/EmojiBackground.png">
+                            ImageSource="../Resources/Bakgrounds/EmojiBackground.png">
                 </ImageBrush>
             </Grid.Background>
         </Grid>

@@ -24,7 +24,18 @@
     <!--System icon button style-->
     <Style x:Key="SystemIcon" BasedOn="{StaticResource Hoverless}" TargetType="Button">
         <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True" />
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="Margin" Value="10, 5, 0, 5" />
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Foreground" Value="{StaticResource ForegroundMainBrush}"></Setter>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource BackgroundLightBrush}"></Setter>
+            </Trigger>
+            <!--<Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource ForegroundMainBrush}"></Setter>
+            </Trigger>-->
+        </Style.Triggers>
     </Style>
 
     <!--Window button style-->
