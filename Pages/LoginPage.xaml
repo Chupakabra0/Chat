@@ -3,6 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:chat="clr-namespace:Chat"
       mc:Ignorable="d"
       d:DesignHeight="400" d:DesignWidth="400"
       Title="LoginPage">
@@ -25,12 +26,13 @@
                         <StackPanel>
                             <!-- Header and subtext -->
                             <TextBlock Text="Sign Up" Style="{StaticResource SignUpTextBlock}"></TextBlock>
-                            <TextBlock Text="It's about to get fun" Style="{StaticResource SubTextBlock}"></TextBlock>
+                            <TextBlock Text="It's about to get fun" Style="{StaticResource SubTextBlock}" Margin="0, 0, 0, 20"></TextBlock>
 
                             <!-- Email, password and check-password textboxes -->
                             <TextBox Tag="Email" Style="{StaticResource PlaceholderTextBox}"></TextBox>
-                            <TextBox Tag="Password" Style="{StaticResource PlaceholderTextBox}"></TextBox>
-                            <TextBox Tag="Check password" Style="{StaticResource PlaceholderTextBox}"></TextBox>
+                            <PasswordBox Tag="Password" Style="{StaticResource PlaceholderPasswordBox}"></PasswordBox>
+                            <PasswordBox Tag="Check password" Style="{StaticResource PlaceholderPasswordBox}" Margin="0, 5, 0, 30"></PasswordBox>
+
 
                             <!-- Sign up button -->
                             <Button Content="Next" Style="{StaticResource DefaultButton}"></Button>

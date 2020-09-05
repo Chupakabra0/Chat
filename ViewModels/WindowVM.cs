@@ -1,10 +1,10 @@
-﻿using System.Windows.Input;
+﻿using System.Windows;
+using System.Windows.Input;
 using Chat.DataModels;
 using Fasetto.Word;
+using System.Windows.Controls;
 
 namespace Chat {
-    using System.Windows;
-
     /// <summary>
     /// Window view model
     /// </summary>

@@ -112,7 +112,7 @@
         </Style.Triggers>
     </Style>
 
-
+    <!--Hyperlink style-->
     <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource Hoverless}">
         <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"></Setter>
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"></Setter>

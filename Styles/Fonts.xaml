@@ -36,6 +36,8 @@
     <Style x:Key="LabelStyle" BasedOn="{StaticResource ControlStyle}" TargetType="Label"/>
     <!-- TextBox style -->
     <Style x:Key="TextBoxStyle" BasedOn="{StaticResource ControlStyle}" TargetType="TextBox"/>
+    <!-- PasswordBox style -->
+    <Style x:Key="PasswordBoxStyle" BasedOn="{StaticResource ControlStyle}" TargetType="PasswordBox" />
     <!-- ListView style -->
     <Style x:Key="ListViewStyle" BasedOn="{StaticResource ControlStyle}" TargetType="ListView"/>
     <!-- TextBlock style -->
