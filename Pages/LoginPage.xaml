@@ -1,19 +1,49 @@
 ﻿<Page x:Class="Chat.Pages.LoginPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      d:DesignHeight="400" d:DesignWidth="400"
       Title="LoginPage">
 
+    <!-- Border to set color for image -->
     <Border Background="{StaticResource BlueBrush}">
         <Grid>
+
+            <!-- Transparent image background -->
             <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0, 0, 500, 500"
-                            ImageSource="../Resources/Bakgrounds/EmojiBackground.png">
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0, 0, 500, 500" ImageSource="../Resources/Bakgrounds/EmojiBackground.png">
                 </ImageBrush>
             </Grid.Background>
+
+            <!-- Main scrollable content -->
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center" TextBlock.TextAlignment="Center">
+                    <!-- White box for login content -->
+                    <Border Background="{StaticResource ForegroundLightBrush}" CornerRadius="10" Padding="15, 50, 15, 15" Width="350" Margin="50, 50. 50, 0">
+                        <StackPanel>
+                            <!-- Header and subtext -->
+                            <TextBlock Text="Sign Up" Style="{StaticResource SignUpTextBlock}"></TextBlock>
+                            <TextBlock Text="It's about to get fun" Style="{StaticResource SubTextBlock}"></TextBlock>
+
+                            <!-- Email, password and check-password textboxes -->
+                            <TextBox Tag="Email" Style="{StaticResource PlaceholderTextBox}"></TextBox>
+                            <TextBox Tag="Password" Style="{StaticResource PlaceholderTextBox}"></TextBox>
+                            <TextBox Tag="Check password" Style="{StaticResource PlaceholderTextBox}"></TextBox>
+
+                            <!-- Sign up button -->
+                            <Button Content="Next" Style="{StaticResource DefaultButton}"></Button>
+                        </StackPanel>
+                    </Border>
+
+                    <!--Already have account-->
+                    <Button Content="I already have an account" HorizontalAlignment="Center"
+                            Style="{StaticResource LinkButton}"></Button>
+
+                </StackPanel>
+            </ScrollViewer>
+
         </Grid>
     </Border>
 

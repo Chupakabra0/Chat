@@ -45,4 +45,8 @@
     <Color x:Key="OrangeColor">#FFA800</Color>
     <SolidColorBrush x:Key="OrangeBrush" Color="{StaticResource OrangeColor}" />
 
+    <!-- Dark Orange -->
+    <Color x:Key="DarkOrangeColor">#644100</Color>
+    <SolidColorBrush x:Key="DarkOrangeBrush" Color="{StaticResource DarkOrangeColor}" />
+
 </ResourceDictionary>

@@ -12,9 +12,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}"
-                            Padding="{TemplateBinding Padding}">
-                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -73,6 +72,79 @@
                 <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"/>
             </Trigger>
         </Style.Triggers>
+    </Style>
+
+    <!--Default application button-->
+    <Style x:Key="DefaultButton" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource OrangeBrush}"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"></Setter>
+        <Setter Property="BorderThickness" Value="0"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}"></Setter>
+        <Setter Property="FontFamily" Value="{StaticResource LatoBold}"></Setter>
+        <Setter Property="Margin" Value="0, 10"></Setter>
+        <Setter Property="Padding" Value="50, 10"></Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+
+                    <Border BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"
+                            SnapsToDevicePixels="True" CornerRadius="10">
+                        <TextBlock HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" Focusable="False" 
+                                   Text="{TemplateBinding Content}" FontFamily="{TemplateBinding FontFamily}"
+                                   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{StaticResource BlueBrush}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{StaticResource OrangeBrush}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource ForegroundDarkBrush}"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="LinkButton" TargetType="Button" BasedOn="{StaticResource Hoverless}">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"></Setter>
+        <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"></Setter>
+        <Setter Property="Margin" Value="0, 20"></Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}"
+                            BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
+                            SnapsToDevicePixels="True">
+                        <TextBlock Focusable="False" Margin="{TemplateBinding Padding}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                   Text="{TemplateBinding Content}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"></TextBlock>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource OrangeBrush}"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{StaticResource ForegroundLightBrush}"></Setter>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}"></Setter>
+            </Trigger>
+        </Style.Triggers>
+
     </Style>
 
 </ResourceDictionary>

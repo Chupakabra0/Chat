@@ -8,4 +8,76 @@
         <Setter Property="Margin" Value="0 6"/>
     </Style>
 
+    <Style x:Key="SignUpTextBlock" TargetType="TextBlock" BasedOn="{StaticResource TextBlockStyle}">
+        <Setter Property="Foreground" Value="{StaticResource BlueBrush}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}"></Setter>
+        <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"></Setter>
+    </Style>
+
+    <Style x:Key="SubTextBlock" TargetType="TextBlock" BasedOn="{StaticResource TextBlockStyle}">
+        <Setter Property="Foreground" Value="{StaticResource ForegroundDarkBrush}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}"></Setter>
+    </Style>
+
+    <!-- Textbox with placeholder -->
+    <Style x:Key="PlaceholderTextBox" TargetType="TextBox" BasedOn="{StaticResource TextBoxStyle}">
+
+        <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}"></Setter>
+        <Setter Property="BorderBrush" Value="{StaticResource BlueBrush}"></Setter>
+        <Setter Property="BorderThickness" Value="0, 0, 0, 1"></Setter>
+        <Setter Property="Padding" Value="5"></Setter>
+        <Setter Property="Margin" Value="0, 5"></Setter>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <!--Border for textbox content-->
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}"
+                                Margin="{TemplateBinding Margin}" Background="{TemplateBinding Background}">
+
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False"
+                                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"></ScrollViewer>
+
+                        </Border>
+
+                        <!-- Placeholder -->
+                        <TextBlock IsHitTestVisible="False" Text="{TemplateBinding Tag}"
+                                   FontFamily="{StaticResource LatoThin}" Padding="{TemplateBinding Padding}"
+                                   VerticalAlignment="Center" HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                   Foreground="{StaticResource ForegroundVeryDarkBrush}">
+                            <!--Becomes visible when there is no text in textbox textblock-->
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                    <Style.Triggers>
+                                        <!--TODO RelativeSource needs to be removed by property in LoginVM-->
+                                        <DataTrigger Binding="{Binding Text, RelativeSource={RelativeSource TemplatedParent}}" Value="">
+                                            <Setter Property="Visibility" Value="Visible"></Setter>
+                                            <Setter Property="FontFamily" Value="{StaticResource LatoRegular}"></Setter>
+                                        </DataTrigger> 
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger>
+
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource BackgroundLightBrush}"></Setter>
+                <Setter Property="BorderBrush" Value="{StaticResource ForegroundDarkBrush}"></Setter>
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
 </ResourceDictionary>
