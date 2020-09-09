@@ -1,6 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:chat="clr-namespace:Chat">
+                    xmlns:chat="clr-namespace:Chat"
+                    xmlns:attachedProperties="clr-namespace:Chat.AttachedProperties"
+                    xmlns:valueConverters="clr-namespace:Chat.ValueConverters">
 
     <!--Style for headers-->
     <Style x:Key="HeaderTextBlock" TargetType="TextBlock" BasedOn="{StaticResource TextBlockStyle}">
@@ -93,7 +95,7 @@
         <Setter Property="Padding" Value="5"></Setter>
         <Setter Property="Margin" Value="0, 5"></Setter>
 
-        <Setter Property="chat:PasswordBoxProperties.MonitorPassword" Value="True"></Setter>
+        <Setter Property="attachedProperties:MonitorPasswordProperty.Value" Value="True"></Setter>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -107,20 +109,10 @@
                         </Border>
 
                         <!-- Placeholder -->
-                        <TextBlock IsHitTestVisible="False" Text="{TemplateBinding Tag}" FontFamily="{StaticResource LatoThin}" Padding="{TemplateBinding Padding}" Margin="{TemplateBinding Margin}" VerticalAlignment="Center" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Foreground="{StaticResource ForegroundVeryDarkBrush}">
-                            <!--Becomes visible when there is no text in textbox textblock-->
-                            <TextBlock.Style>
-                                <Style TargetType="TextBlock">
-                                    <Setter Property="Visibility" Value="Collapsed"></Setter>
-                                    <Style.Triggers>
-                                        <!--TODO RelativeSource needs to be removed by property in LoginVM-->
-                                        <DataTrigger Binding="{Binding (chat:PasswordBoxProperties.HasText), RelativeSource={RelativeSource TemplatedParent}}" Value="False">
-                                            <Setter Property="Visibility" Value="Visible"></Setter>
-                                            <Setter Property="FontFamily" Value="{StaticResource LatoThin}"></Setter>
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </TextBlock.Style>
+                        <TextBlock IsHitTestVisible="False" Text="{TemplateBinding Tag}"
+                                   FontFamily="{StaticResource LatoThin}" Padding="{TemplateBinding Padding}"
+                                   VerticalAlignment="Center" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" Margin="{TemplateBinding Margin}" Foreground="{StaticResource ForegroundVeryDarkBrush}"
+                                   Visibility="{TemplateBinding attachedProperties:HasTextProperty.Value, Converter={valueConverters:VisibilityValueConverter}}">
                         </TextBlock>
 
                     </Grid>

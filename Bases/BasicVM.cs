@@ -9,7 +9,7 @@
     /// Base view-model with implementation of INotifyPropertyChanged interface
     /// </summary>
     [AddINotifyPropertyChangedInterface]
-    public class BasicVM : INotifyPropertyChanged {
+    public abstract class BasicVM : INotifyPropertyChanged {
 
         public event PropertyChangedEventHandler PropertyChanged;
 

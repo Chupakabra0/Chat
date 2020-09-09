@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
@@ -117,14 +116,12 @@ namespace Fasetto.Word {
             var source = PresentationSource.FromVisual(mWindow);
 
             // Reset the transform to default
-            mTransformToDevice = default(Matrix);
+            mTransformToDevice = default;
 
             // If we cannot get the source, ignore
-            if (source == null)
-                return;
 
             // Otherwise, get the new transform object
-            mTransformToDevice = source.CompositionTarget.TransformToDevice;
+            if (source?.CompositionTarget != null) mTransformToDevice = source.CompositionTarget.TransformToDevice;
         }
 
         /// <summary>
@@ -138,11 +135,9 @@ namespace Fasetto.Word {
             var handleSource = HwndSource.FromHwnd(handle);
 
             // If not found, end
-            if (handleSource == null)
-                return;
 
             // Hook into it's Windows messages
-            handleSource.AddHook(WindowProc);
+            handleSource?.AddHook(WindowProc);
         }
 
         #endregion
@@ -179,7 +174,7 @@ namespace Fasetto.Word {
             var edgedRight = windowBottomRight.X >= (mScreenSize.Right - mEdgeTolerance);
 
             // Get docked position
-            var dock = WindowDockPosition.Undocked;
+            WindowDockPosition dock;
 
             // Left docking
             if (edgedTop && edgedBottom && edgedLeft)
@@ -234,8 +229,7 @@ namespace Fasetto.Word {
         /// <param name="lParam"></param>
         private void WmGetMinMaxInfo(System.IntPtr hwnd, System.IntPtr lParam) {
             // Get the point position to determine what screen we are on
-            POINT lMousePosition;
-            GetCursorPos(out lMousePosition);
+            GetCursorPos(out var lMousePosition);
 
             // Get the primary monitor at cursor position 0,0
             var lPrimaryScreen = MonitorFromPoint(new POINT(0, 0), MonitorOptions.MONITOR_DEFAULTTOPRIMARY);
