@@ -57,10 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Animations\PageAnimations.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
     <Compile Include="Bases\BaseAttachedProperty.cs" />
     <Compile Include="Bases\BaseValueConverter.cs" />
     <Compile Include="DataModels\ApplicationPage.cs" />
+    <Compile Include="Bases\BasePage.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>

@@ -32,7 +32,7 @@ namespace Fasetto.Word {
         /// <summary>
         /// The window to handle the resizing for
         /// </summary>
-        private Window mWindow;
+        private readonly Window mWindow;
 
         /// <summary>
         /// The last calculated available screen size
@@ -42,7 +42,7 @@ namespace Fasetto.Word {
         /// <summary>
         /// How close to the edge the window has to be to be detected as at the edge of the screen
         /// </summary>
-        private int mEdgeTolerance = 2;
+        private readonly int mEdgeTolerance = 2;
 
         /// <summary>
         /// The transform matrix used to convert WPF sizes to screen pixels
@@ -151,7 +151,7 @@ namespace Fasetto.Word {
         /// <param name="e"></param>
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e) {
             // We cannot find positioning until the window transform has been established
-            if (mTransformToDevice == default(Matrix))
+            if (mTransformToDevice == default)
                 return;
 
             // Get the WPF size
@@ -211,7 +211,7 @@ namespace Fasetto.Word {
             switch (msg) {
                 // Handle the GetMinMaxInfo of the Window
                 case 0x0024:/* WM_GETMINMAXINFO */
-                    WmGetMinMaxInfo(hwnd, lParam);
+                    WmGetMinMaxInfo(lParam);
                     handled = true;
                     break;
             }
@@ -225,9 +225,8 @@ namespace Fasetto.Word {
         /// Get the min/max window size for this window
         /// Correctly accounting for the taskbar size and position
         /// </summary>
-        /// <param name="hwnd"></param>
         /// <param name="lParam"></param>
-        private void WmGetMinMaxInfo(System.IntPtr hwnd, System.IntPtr lParam) {
+        private void WmGetMinMaxInfo(System.IntPtr lParam) {
             // Get the point position to determine what screen we are on
             GetCursorPos(out var lMousePosition);
 
@@ -243,7 +242,7 @@ namespace Fasetto.Word {
             var lCurrentScreen = MonitorFromPoint(lMousePosition, MonitorOptions.MONITOR_DEFAULTTONEAREST);
 
             // If this has changed from the last one, update the transform
-            if (lCurrentScreen != mLastScreen || mTransformToDevice == default(Matrix))
+            if (lCurrentScreen != mLastScreen || mTransformToDevice == default)
                 GetTransform();
 
             // Store last know screen

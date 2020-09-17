@@ -19,8 +19,16 @@
                       CornerRadius="0"/>
     </WindowChrome.WindowChrome>
 
-    <UniformGrid Background="{StaticResource ForegroundLightBrush}">
-        <Frame Content="{Binding CurrentPage, Converter={valueConverters:ApplicationPageValueConverter}}"></Frame>
-    </UniformGrid>
+    <Border Background="{StaticResource BlueBrush}">
+        <Grid>
+            <!-- Blue background image -->
+            <Grid.Background>
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="Resources/Bakgrounds/EmojiBackground.png" />
+            </Grid.Background>
+
+            <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={valueConverters:ApplicationPageValueConverter}}"
+                   Background="Transparent" />
+        </Grid>
+    </Border>
 
 </Window>

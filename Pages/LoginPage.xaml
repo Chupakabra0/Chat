@@ -1,22 +1,16 @@
-﻿<Page x:Class="Chat.Pages.LoginPage"
+﻿<pages:BasePage x:Class="Chat.Pages.LoginPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:chat="clr-namespace:Chat"
+      xmlns:pages="clr-namespace:Chat.Pages"
       mc:Ignorable="d"
-      d:DesignHeight="400" d:DesignWidth="400"
+      d:DesignHeight="800" d:DesignWidth="600"
       Title="LoginPage">
 
     <!-- Border to set color for image -->
-    <Border Background="{StaticResource BlueBrush}">
+    <Border>
         <Grid>
-
-            <!-- Transparent image background -->
-            <Grid.Background>
-                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0, 0, 500, 500" ImageSource="../Resources/Bakgrounds/EmojiBackground.png">
-                </ImageBrush>
-            </Grid.Background>
 
             <!-- Main scrollable content -->
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
@@ -49,4 +43,4 @@
         </Grid>
     </Border>
 
-</Page>
+</pages:BasePage>
